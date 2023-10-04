@@ -109,9 +109,8 @@ define([
 
                     if (res.status && res.html) {
                         /* Breeze fix: fancybox replaced with modal */
-                        $(res.html).modal({modalClass: 'rfq-confirm-modal', buttons: []});
+                        $(res.html).modal({modalClass: 'rfq-confirm-modal', buttons: [], autoOpen: true});
                         $('.rfq-confirm-modal .modal-inner-wrap').css('max-width', '550px');
-                        $('#rfq-confirm').modal('openModal');
                     }
 
                     if (res.backUrl) {
